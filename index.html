@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCHYMINIGAGUA | Arte y Teatro</title>
+    <meta name="description"
+        content="Fundación TCHYMINIGAGUA: 40 años de teatro acrobático, popular y festivo, cultura ancestral y transformación social a través del arte.">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Work+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Todos los estilos (navbar, iconos sociales, carrusel, tarjetas, formulario, etc.)
+         viven ahora en index.css para evitar duplicación entre páginas. -->
+</head>
+
+<body>
+    <!-- Pantalla de Carga -->
+    <div id="loader">
+        <div class="loader-content">
+            <!-- Contenedor de las acrobacias secuenciales -->
+            <div class="acrobat-wrapper">
+
+                <!-- 1. Acróbata 1: Salto mortal (Flip) -->
+                <svg class="acrobat fig-1" viewBox="0 0 100 100" width="60" height="60">
+                    <circle cx="50" cy="25" r="12" fill="var(--highlight)" />
+                    <path d="M50 37 L50 70 M50 45 L25 30 M50 45 L75 30 M50 70 L30 95 M50 70 L70 95"
+                        stroke="var(--highlight)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <!-- 2. Acróbata 2: Pose abierta / Salto en estrella -->
+                <svg class="acrobat fig-2" viewBox="0 0 100 100" width="60" height="60">
+                    <circle cx="50" cy="22" r="12" fill="var(--highlight)" />
+                    <path d="M50 34 L50 68 M50 42 L20 18 M50 42 L80 18 M50 68 L25 92 M50 68 L75 92"
+                        stroke="var(--highlight)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <!-- 3. Acróbata 3: Malabarista -->
+                <svg class="acrobat fig-3" viewBox="0 0 100 100" width="60" height="60">
+                    <circle cx="50" cy="25" r="12" fill="var(--highlight)" />
+                    <path d="M50 37 L50 70 M50 45 L30 20 M50 45 L70 20 M50 70 L35 95 M50 70 L65 95"
+                        stroke="var(--highlight)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                    <!-- Objetos de malabares flotando -->
+                    <circle cx="20" cy="10" r="5" fill="var(--highlight)" />
+                    <circle cx="50" cy="5" r="5" fill="var(--highlight)" />
+                    <circle cx="80" cy="10" r="5" fill="var(--highlight)" />
+                </svg>
+
+                <!-- Sombra proyectada en el suelo -->
+                <div class="shadow"></div>
+            </div>
+
+            <h1>TCHYMINIGAGUA</h1>
+            <p>Cargando experiencia...</p>
+        </div>
+    </div>
+
+    <!-- Encabezado y Navegación (MODIFICADO PARA RESPONSIVE) -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo-nav">
+                <span class="logo-icon-wrap"><img src="img/logo.png" alt="Logo Fundación TCHYMINIGAGUA"
+                        class="logo-icon"></span>
+                <span class="logo-wordmark">
+                    <span class="logo-name">TCHYMINIGAGUA</span>
+                    <span class="logo-tag">Teatro acrobático · Fundación</span>
+                </span>
+            </a>
+            <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#hero-slider" class="active">Inicio</a></li>
+                <li><a href="#fundacion">La Fundación</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="obras_en_repertorio.html">Obras en Repertorio</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+
+                <li><a href="#contacto">Contacto</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+
+        <!-- Contenido Principal -->
+        <main>
+            <!-- VIDEO PRINCIPAL (HERO) -->
+            <section id="hero-slider" class="carousel-container">
+
+                <input type="radio" name="videos" id="video1" checked>
+                <input type="radio" name="videos" id="video2">
+
+                <!-- VIDEO 1 -->
+                <div class="carousel-slide video-1">
+                    <video controls playsinline preload="metadata" class="hero-video">
+                        <source src="video/video_principal.mov" type="video/mp4">
+                    </video>
+                </div>
+
+                <!-- VIDEO 2 -->
+                <div class="carousel-slide video-2">
+                    <video controls playsinline preload="metadata" class="hero-video">
+                        <source src="video/video_principal2.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <!-- CAMBIAR AL VIDEO 2 -->
+                <label for="video2" class="flecha derecha">›</label>
+
+                <!-- VOLVER AL VIDEO 1 -->
+                <label for="video1" class="flecha izquierda">‹</label>
+
+            </section>
+
+
+            <!-- FRANJA DE CIFRAS -->
+            <section class="stats-strip">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">1985</div>
+                        <div class="stat-label">Año de fundación</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">40+</div>
+                        <div class="stat-label">Obras creadas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Montajes en repertorio</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1ª</div>
+                        <div class="stat-label">Patente mundial: zancos en patines</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN LA FUNDACIÓN -->
+            <section id="fundacion" class="section-container brand-mesh">
+                <span class="section-eyebrow">Desde 1985 · Bogotá, Colombia</span>
+                <h2>Esencia Corporativa</h2>
+                <p class="section-subtitle">Lo que impulsa a la organización a crear lo extraordinario</p>
+
+                <div class="nosotros-content reveal">
+                    <div class="historia-box">
+                        <h3>Historia</h3>
+                        <p>Fundada en 1985 y dirigida actualmente por Cesar Grande, la Fundación TCHYMINIGAGUA utiliza
+                            el
+                            teatro y la cultura popular para promover la transformación social y la paz. Con un equipo
+                            integral de artistas profesionales y independentes, la organización ha creado más de 40
+                            obras
+                            para calle, sala y espacios no convencionales. Su sello distintivo es una técnica de teatro
+                            acrobático y festivo caracterizada por la energía, el ritmo y la alegría y la invención
+                            patentada a nivel mundial de los zancos en patines.</p>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">1985</div>
+                            <p>Fundación de TCHYMINIGAGUA como plataforma de teatro popular para la paz.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">+40 obras</div>
+                            <p>Montajes creados para calle, sala y espacios no convencionales.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">Patente mundial</div>
+                            <p>Invención de los zancos en patines, sello técnico distintivo de la fundación.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">Hoy</div>
+                            <p>Dirigida por Cesar Grande, sigue girando con su repertorio internacional.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjetas Misión, Visión, Valores con imagen de fondo -->
+                    <div class="mvv-grid">
+                        <article class="mvv-card" style="background-image: url('img/img-1.jpg');">
+                            <span class="mvv-number">01</span>
+                            <div class="mvv-text">
+                                <h3>Misión</h3>
+                                <p>La misión de la fundación consiste en promover la transformación social en
+                                    comunidades
+                                    vulnerables, impulsar la identidad cultural basada en la memoria ancestral Mhuysqua
+                                    y
+                                    construir paz a través de las artes escénicas.</p>
+                            </div>
+                        </article>
+
+                        <article class="mvv-card" style="background-image: url('img/img-2.jpg');">
+                            <span class="mvv-number">02</span>
+                            <div class="mvv-text">
+                                <h3>Visión</h3>
+                                <p>Su visión apunta a consolidarse como embajadora global del talento colombiano y
+                                    expandir
+                                    su distintiva técnica de teatro acrobático para dignificar la vida artística.</p>
+                            </div>
+                        </article>
+
+                        <article class="mvv-card" style="background-image: url('img/img-3.jpg');">
+                            <span class="mvv-number">03</span>
+                            <div class="mvv-text">
+                                <h3>Valores</h3>
+                                <p>Sus valores se fundamentan en la unidad y tolerancia para la convivencia, la alegría
+                                    y
+                                    energía para transmitir optimismo, y la resiliencia y esperanza para superar las
+                                    dificultades sociales mediante el arte.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN DESTACADA: REPERTORIO + PORTAFOLIO -->
+            <section id="explora" class="section-container brand-mesh">
+                <span class="section-eyebrow">Escenario y cámara</span>
+                <h2>Repertorio y Portafolio</h2>
+                <p class="section-subtitle">Dos caminos para conocer el trabajo de la fundación: lo que llevamos a
+                    escena y lo que capturamos detrás de cámara.</p>
+                <div class="showcase-grid reveal">
+
+                    <a href="obras_en_repertorio.html" class="showcase-card showcase-card--repertorio"
+                        data-cursor="Ver Obras en Repertorio">
+
+
+
+                        <span class="showcase-number">01</span>
+
+                        <div class="showcase-body">
+                            <span class="showcase-tag">40 años de gira internacional</span>
+
+                            <h3>Obras en Repertorio</h3>
+
+                            <p>
+                                Cuatro montajes, cuatro décadas de teatro acrobático y festivo.
+                                Toca una tarjeta para verla en YouTube.
+                            </p>
+
+                            <span class="showcase-cta">
+                                Ver repertorio completo
+
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                    stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+
+                                </svg>
+                            </span>
+                        </div>
+
+                    </a>
+
+
+                    <a href="galeria.html" class="showcase-card showcase-card--galeria"
+                        data-cursor="Ver Proyectos Visuales">
+
+                        <span class="showcase-number">02</span>
+
+                        <div class="showcase-body">
+                            <span class="showcase-tag">Portafolio audiovisual</span>
+
+                            <h3>Proyectos Visuales</h3>
+
+                            <p>
+                                Fotografía, video y dirección de arte: una selección de los
+                                proyectos más destacados del equipo.
+                            </p>
+
+                            <span class="showcase-cta">
+                                Ver galería completa
+
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                    stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+
+                                </svg>
+                            </span>
+                        </div>
+
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- SECCIÓN NOTICIAS -->
+
+            <!-- aquí queda exactamente tu carrusel actual -->
+            <div id="noticias" class="section-container">
+                <div class="section-eyebrow">Actualidad</div>
+                <h2>Noticias</h2>
+            </div>
+            <div class="noticias-carousel">
+
+                <!-- NOTICIA 1 -->
+                <article class="noticia-slide active">
+                    <img src="img/noticia1.jpeg" alt="Tchyminigagua">
+                    <a href="https://www.instagram.com/tchyminigagua?igsh=OWJpeG5mc3hwMmtk" class="noticia-btn">
+                        Ver noticia
+                    </a>
+                </article>
+
+                <!-- NOTICIA 2 -->
+                <article class="noticia-slide">
+                    <img src="img/noticia2.jpeg" alt="Tchyminigagua">
+                    <a href="https://www.instagram.com/tchyminigagua?igsh=OWJpeG5mc3hwMmtk" class="noticia-btn">
+                        Ver noticia
+                    </a>
+                </article>
+
+                <!-- NOTICIA 3 -->
+                <article class="noticia-slide">
+                    <img src="img/noticia3.jpeg" alt="Tchyminigagua">
+                    <a href="https://www.instagram.com/tchyminigagua?igsh=OWJpeG5mc3hwMmtk" class="noticia-btn">
+                        Ver noticia
+                    </a>
+                </article>
+
+                <!-- NOTICIA 4 -->
+                <article class="noticia-slide">
+                    <img src="img/noticia4.png" alt="Tchyminigagua">
+                    <a href="https://www.instagram.com/tchyminigagua?igsh=OWJpeG5mc3hwMmtk" class="noticia-btn">
+                        Ver noticia
+                    </a>
+                </article>
+
+                <!-- NOTICIA 5 -->
+                <article class="noticia-slide">
+                    <img src="img/noticia5.png" alt="Tchyminigagua">
+                    <a href="https://www.instagram.com/tchyminigagua?igsh=OWJpeG5mc3hwMmtk" class="noticia-btn">
+                        Ver noticia
+                    </a>
+                </article>
+
+                <!-- NOTICIA 6 -->
+                <article class="noticia-slide">
+                    <img src="img/noticia6.png" alt="Tchyminigagua">
+                    <a href="https://www.instagram.com/tchyminigagua?igsh=OWJpeG5mc3hwMmtk" class="noticia-btn">
+                        Ver noticia
+                    </a>
+                </article>
+
+                <!-- NOTICIA 7 -->
+                <article class="noticia-slide">
+                    <img src="img/noticia7.png" alt="Tchyminigagua">
+                    <a href="https://www.instagram.com/tchyminigagua?igsh=OWJpeG5mc3hwMmtk" class="noticia-btn">
+                        Ver noticia
+                    </a>
+                </article>
+
+                <button class="noticias-prev" type="button">‹</button>
+                <button class="noticias-next" type="button">›</button>
+
+            </div>
+
+
+
+            <!-- SECCIÓN CONTACTO -->
+            <section id="contacto" class="section-container brand-mesh">
+                <span class="section-eyebrow">Trabajemos juntos</span>
+                <h2>Contacto y Alianzas</h2>
+                <p class="section-subtitle">¿Busca crear contenido increíble? Establezca contacto para formar equipo.
+                </p>
+
+                <div class="grid-2 contact-layout reveal">
+                    <div class="contact-left">
+                        <article class="contact-info">
+                            <h3>Ubicación y Datos</h3>
+                            <ul class="contact-list">
+                                <li>
+                                    <span class="contact-icon">
+                                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                            <path
+                                                d="M12 2C7.86 2 4.5 5.36 4.5 9.5c0 5.5 7.5 12.5 7.5 12.5s7.5-7 7.5-12.5C19.5 5.36 16.14 2 12 2zm0 10.25a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z" />
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <strong>Sede</strong>
+                                        <span>Bogotá, Colombia</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="contact-icon">
+                                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                            <path
+                                                d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.3 5.47a.9.9 0 0 0 1 0L19.8 6H4.2zM20 7.9l-6.86 5.14a2.9 2.9 0 0 1-3.28 0L4 7.9V18h16V7.9z" />
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <strong>Email</strong>
+                                        <a
+                                            href="mailto:fundaciontchyminigagua@gmail.com">fundaciontchyminigagua@gmail.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p>La organización está siempre en la búsqueda de nuevos talentos, modelos y marcas aliadas
+                                para
+                                proyectos
+                                conjuntos.</p>
+                        </article>
+
+                        <article class="contact-box">
+                            <form action="https://formsubmit.co/haroldsneider19@gmail.com" method="POST"
+                                class="contact-form">
+
+                                <!-- Se eliminó la línea que bloqueaba el Captcha para permitir la activación inicial -->
+                                <!-- Asunto del correo cuando llegue a la bandeja de entrada -->
+                                <input type="hidden" name="_subject"
+                                    value="Nuevo mensaje desde la web de TCHYMINIGAGUA">
+
+                                <div class="input-group">
+                                    <label for="nombre">Nombre </label>
+                                    <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="email">Correo Electrónico</label>
+                                    <input type="email" id="email" name="email" placeholder="correo@ejemplo.com"
+                                        required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="mensaje">Mensaje o Propuesta</label>
+                                    <textarea id="mensaje" name="mensaje" rows="4"
+                                        placeholder="Describa la idea o propuesta..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                            </form>
+
+                            <!-- ICONOS SOCIALES AGREGADOS AQUÍ -->
+                            <div class="social-icons">
+                                <!-- YouTube -->
+                                <a href="https://www.youtube.com/@TCHYMINIGAGUA40A%C3%91OS" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                                        <path
+                                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                    </svg>
+                                </a>
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/tchyminigagua?igsh=OWJpeG5mc3hwMmtk" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                                    </svg>
+                                </a>
+                                <!-- Facebook -->
+                                <a href="https://www.facebook.com/share/1EoWDPr1Uw/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                                        <path
+                                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                    </svg>
+                                </a>
+                                <!-- TikTok -->
+                                <a href="https://www.tiktok.com/@tchyminigagua?_r=1&_t=ZS-98TRxyNQuO4" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                                        <path
+                                            d="M12.525.02c1.31-.02 2.61-.01 3.91-.04.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v7.2c0 1.96-.5 3.96-1.82 5.36-1.5 1.59-3.8 2.2-5.93 1.73-2.17-.48-4.04-2.03-4.83-4.14-.8-2.12-.55-4.57.65-6.49 1.2-1.9 3.23-3.15 5.44-3.32v4.06c-1.34.13-2.61.85-3.3 1.96-.7 1.1-.73 2.58-.08 3.7.64 1.12 1.95 1.74 3.23 1.53 1.28-.21 2.3-1.22 2.6-2.48.16-.67.16-1.37.16-2.07V.021z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="map-wrap">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                        </svg>
+                        </span>
+
+                        <iframe src="https://www.google.com/maps?q=Cra+80m+%2322+Bosa+Bogot%C3%A1&z=17&output=embed"
+                            title="Ubicación Fundación Tchyminigagua"
+                            style="border:0; width:100%; height:100%; min-height:320px; border-radius:16px;"
+                            loading="lazy" allowfullscreen>
+                        </iframe>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- PIE DE PÁGINA -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-col footer-brand">
+                    <div class="logo-nav">
+                        <img src="img/logo.png" alt="Logo Fundación TCHYMINIGAGUA" class="logo-icon">
+                    </div>
+                    <p class="footer-tagline">Teatro acrobático, popular y festivo desde 1985. Cultura
+                        ancestral, arte y transformación social en escenarios de todo el mundo.</p>
+                    <div class="footer-social">
+                        <a href="https://www.youtube.com/@TCHYMINIGAGUA40A%C3%91OS" target="_blank"
+                            rel="noopener noreferrer" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/tchyminigagua?igsh=OWJpeG5mc3hwMmtk" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/share/1EoWDPr1Uw/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@tchyminigagua?_r=1&_t=ZS-98TRxyNQuO4" target="_blank"
+                            rel="noopener noreferrer" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.04.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v7.2c0 1.96-.5 3.96-1.82 5.36-1.5 1.59-3.8 2.2-5.93 1.73-2.17-.48-4.04-2.03-4.83-4.14-.8-2.12-.55-4.57.65-6.49 1.2-1.9 3.23-3.15 5.44-3.32v4.06c-1.34.13-2.61.85-3.3 1.96-.7 1.1-.73 2.58-.08 3.7.64 1.12 1.95 1.74 3.23 1.53 1.28-.21 2.3-1.22 2.6-2.48.16-.67.16-1.37.16-2.07V.021z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html#hero-slider">Inicio</a></li>
+                        <li><a href="index.html#fundacion">La Fundación</a></li>
+                        <li><a href="obras_en_repertorio.html">Obras en Repertorio</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="noticias.html">Noticias</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>Bogotá, Colombia</li>
+                        <li><a href="mailto:fundaciontchyminigagua@gmail.com">fundaciontchyminigagua@gmail.com</a>
+                        </li>
+                        <li><a href="#contacto">Escríbenos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TCHYMINIGAGUA. Todos los derechos reservados.</p>
+                <p>Teatro acrobático y festivo · Bogotá, Colombia</p>
+            </div>
+        </footer>
+        <script>
+            // PANTALLA DE CARGA
+            window.addEventListener('load', function () {
+                const loader = document.getElementById("loader");
+                setTimeout(() => {
+                    loader.classList.add("fade-out");
+                    setTimeout(() => {
+                        loader.style.display = "none";
+                    }, 800);
+                }, 3000);
+            });
+
+            // CARRUSEL
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.carousel-slide');
+
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                if (index >= slides.length) {
+                    currentSlide = 0;
+                } else if (index < 0) {
+                    currentSlide = slides.length - 1;
+                } else {
+                    currentSlide = index;
+                }
+                slides[currentSlide].classList.add('active');
+            }
+
+            function moveSlide(step) {
+                showSlide(currentSlide + step);
+            }
+
+            setInterval(() => {
+                moveSlide(1);
+            }, 5000);
+
+            // FUNCIONALIDAD AÑADIDA PARA EL MENÚ RESPONSIVE
+            // CABECERA CON PROFUNDIDAD AL HACER SCROLL
+            const siteHeader = document.querySelector('header');
+            const toggleHeaderShadow = () => {
+                siteHeader.classList.toggle('is-scrolled', window.scrollY > 12);
+            };
+            toggleHeaderShadow();
+            window.addEventListener('scroll', toggleHeaderShadow, { passive: true });
+
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', () => {
+                const isOpen = navLinks.classList.toggle('active');
+                hamburger.setAttribute('aria-expanded', isOpen);
+            });
+
+            // ANIMACIÓN DE ENTRADA AL HACER SCROLL
+            const revealEls = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            revealEls.forEach(el => revealObserver.observe(el));
+        </script>
+        <script src="octopus-cursor.js" defer></script>
+
+        <script src="noticias.js"></script>
+</body>
+
+</html>
